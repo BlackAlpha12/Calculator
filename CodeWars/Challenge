@@ -1,0 +1,19 @@
+function spinWords(sentence) {
+  // Split the sentence into an array of words
+  const words = sentence.split(" ");
+  
+  // Define a function to reverse a word if it has 5 or more letters
+  function reverseWord(word) {
+    return word.length >= 5 ? word.split("").reverse().join("") : word;
+  }
+  
+  // Apply the reverseWord function to each word and join them back into a sentence
+  const result = words.map(reverseWord).join(" ");
+  
+  return result;
+}
+
+// Example usage:
+const inputSentence = "Hey fellow Warriors";
+const outputSentence = spinWords(inputSentence);
+console.log(outputSentence); // Output: "Hey wollef sroirraw"
